@@ -7,6 +7,9 @@ name: label-guard Windows smoke
 on:
   push:
     branches: [main]
+    paths:
+      - "scripts/label-guard.sh"
+      - ".github/workflows/label-guard-windows-smoke.yml"
   pull_request:
     paths:
       - "scripts/label-guard.sh"
