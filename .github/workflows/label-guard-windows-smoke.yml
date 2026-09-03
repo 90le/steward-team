@@ -1,0 +1,32 @@
+name: label-guard Windows smoke
+
+# 验证 scripts/label-guard.sh 在 Windows（Git Bash）环境下同样可用：
+# 1) 语法检查（bash -n）
+# 2) 真实执行（脚本本身对已打好标签的仓库是幂等的：无标签 PR 才补打，已合并单才同步 landed，
+#    重复执行不会产生副作用），用真实 gh 调用输出 fixes= 与退出码作为证据。
+on:
+  push:
+    branches: [main]
+  pull_request:
+    paths:
+      - "scripts/label-guard.sh"
+      - ".github/workflows/label-guard-windows-smoke.yml"
+
+permissions:
+  issues: write
+  pull-requests: write
+
+jobs:
+  windows-git-bash:
+    name: label-guard.sh on windows-latest (Git Bash)
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Syntax check (bash -n)
+        shell: bash
+        run: bash -n scripts/label-guard.sh
+      - name: Run label-guard.sh
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: bash scripts/label-guard.sh
