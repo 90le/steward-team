@@ -107,7 +107,6 @@
 - 本轮无认领、无修订、无新 PR、无新增转人工事件 → 无产出，webhook 未播报。
 - 限流：`gh api rate_limit` → 5000/5000，无 429。
 
-
 ## 2026-09-04 13:20 (Asia/Shanghai) — cron 开发流水线
 
 - 机械校验：`bash scripts/label-guard.sh` → `label-guard: fixes=0`（无修复）。
