@@ -14,9 +14,8 @@
 ## 验证证据
 
 <!--
-命令 + 输出摘要，并标注证据级别：
-- runtime_live_pass：亲手跑通验收标准对应的真实场景
-- structural_smoke：仅验证结构/存在性/静态检查，未覆盖真实运行路径
+命令 + 输出摘要，并标注证据级别。证据四档定义（原文摘自 docs/04-角色-小检.md:12，不要重新表述）：
+「证据分级判定：每条结论标注 structural_smoke / ui_warning_or_system_message / skipped_or_needs_auth / runtime_live_pass 四档；只有 runtime_live_pass 支撑「通过」。」
 -->
 
 ```bash
@@ -27,7 +26,7 @@
 # 输出摘要
 ```
 
-证据级别：<!-- runtime_live_pass / structural_smoke -->
+证据级别：<!-- structural_smoke / ui_warning_or_system_message / skipped_or_needs_auth / runtime_live_pass -->
 
 ## 影响面
 
