@@ -34,4 +34,4 @@ approved → dev-claimed(小码) → in-dev → PR → code-review(小助)
 
 ## 文档源头
 
-本仓库的 `CONSTITUTION.md` 与 `docs/` 是本地工程 `octo-steward/10-软件团队/` 权威源的投影——改源头，再投影。
+本仓库 `docs/` 是团队设计的唯一权威源（TEAM/CONSTITUTION/状态机契约/角色宪章），直接在本仓库改、走 PR 评审、可被引用行号、可被 scar 追溯。本地 `octo-steward/10-软件团队/` 已降级为历史快照（archived），不再作为权威源单向投影到本仓库。
