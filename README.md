@@ -8,7 +8,7 @@
 2. 给 issue 打 `status/approved`（或交给小丘分类打标）。
 3. 之后流水线自动接管：
 
-```
+```text
 approved → dev-claimed(小码) → in-dev → PR → code-review(小助)
      → qa(小检，独立复跑+证据分级) → 发布门(小衡，清单核对+合并) → landed
 ```
